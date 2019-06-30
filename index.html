@@ -9,15 +9,38 @@
 </head>
 <body>
     <div class="fullcontainer">
+		<div class="header">
+			<img src="BWLogo.png" alt="Bombay Works logo">
+		</div>
+		<div class="intro">
+			<h2>Welcome To Shape Calculator</h2>
+			<p>Shape Calculator is an interactive web application. To the right you will find the 3 step application. Follow the intstructions in each step . Clicking cancel will take you back to step 1. Enjoy</p>
+		</div>
         <div class="calculator">
 			<div class="innerbox movescreen">
             <div class="screen" id="screen1">
-				<h1>Select your shape</h1>
+				<h1>1. Select your shape</h1>
 				<form action="javascript:getShape()" name="shapesform" id="shapes">
-					<input type="radio" name="shape" value="circle" class="shape circle">Circle
-					<input type="radio" name="shape" value="square" class="shape square">Square
-					<input type="radio" name="shape" value="rectangle" class="shape rectangle">Rectangle
-					<input type="radio" name="shape" value="ellipse" class="shape ellipse">Ellipse
+					<p class="form__answer">
+						<input type="radio" name="shape" value="circle" class="shape" id="circle" checked>
+						<label for="circle"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+						</svg>Circle</label>
+					</p>
+					<p class="form__answer">
+						<input type="radio" name="shape" value="square" class="shape" id="square">
+						<label for="square"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+						</svg>Square</label>
+					</p>
+					<p class="form__answer">
+						<input type="radio" name="shape" value="rectangle" class="shape" id="rectangle">
+						<label for="rectangle"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+						</svg>Rectangle</label>
+					</p>
+					<p class="form__answer">
+						<input type="radio" name="shape" value="ellipse" class="shape" id="ellipse">
+						<label for="ellipse"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+						</svg>Ellipse</label>
+					</p>
 					<button type="submit">Next</button>
 				</form>
 			</div><!-- end screen1 -->
