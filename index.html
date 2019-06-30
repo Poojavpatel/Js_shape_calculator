@@ -12,7 +12,7 @@
         <div class="calculator">
             <div class="screen" id="screen1">
 				<h1>Select your shape</h1>
-				<form name="shapesform" id="shapes" onsubmit = "getShape();return false">
+				<form action="javascript:getShape()" name="shapesform" id="shapes">
 					<input type="radio" name="shape" value="circle" class="shape circle">Circle
 					<input type="radio" name="shape" value="square" class="shape square">Square
 					<input type="radio" name="shape" value="rectangle" class="shape rectangle">Rectangle
@@ -26,15 +26,19 @@
 				<p>Input required variables</p>
 				<form name="dimensionform" id="dimensions" onsubmit = "getDimensions();return false">
 					<label for="w" class="d1">Dimension 1</label>
-					<input type="number" name="w" value="0.0">
+					<input type="number" name="w" value="0" step="any"> 
 					<label for="h" class="d2">Dimension 2</label>
-					<input type="number" name="h" value="0.0" class="num2">
+					<input type="number" name="h" value="0" class="num2" step="any">
 					<button type="submit">Next</button>
-					<button class="cancel">Cancel</button>
+					<button class="cancel" onclick="goHome()">Cancel</button>
 				</form>
 			</div><!-- end screen2 -->
 			<div class="screen" id="screen3">
 				<h1>screen 3</h1>
+				<p>You have calculated the area of <span class="resultshape"></span></p>
+				<p>Below is your result</p>
+				<h2>The area is <span class='areaspan'>0.00</span></h2>
+				<button class="cancel" onclick="goHome()">Start Over</button>
 			</div><!-- end screen3 -->
         </div>
 	</div>
