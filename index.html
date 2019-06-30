@@ -12,7 +12,7 @@
         <div class="calculator">
             <div class="screen" id="screen1">
 				<h1>Select your shape</h1>
-				<form name="shapesform" id="shapes" onsubmit = "getShape()">
+				<form name="shapesform" id="shapes" onsubmit = "getShape();return false">
 					<input type="radio" name="shape" value="circle" class="shape circle">Circle
 					<input type="radio" name="shape" value="square" class="shape square">Square
 					<input type="radio" name="shape" value="rectangle" class="shape rectangle">Rectangle
@@ -22,10 +22,15 @@
 			</div><!-- end screen1 -->
 			<div class="screen" id="screen2">
 				<h1>screen 2</h1>
-				<p>You have selected a <span>shape</span></p>
+				<p>You have selected a <span class="spanshape">shape</span></p>
 				<p>Input required variables</p>
-				<form>
-					
+				<form name="dimensionform" id="dimensions" onsubmit = "getDimensions();return false">
+					<label for="w" class="d1">Dimension 1</label>
+					<input type="number" name="w" value="0.0">
+					<label for="h" class="d2">Dimension 2</label>
+					<input type="number" name="h" value="0.0" class="num2">
+					<button type="submit">Next</button>
+					<button class="cancel">Cancel</button>
 				</form>
 			</div><!-- end screen2 -->
 			<div class="screen" id="screen3">
