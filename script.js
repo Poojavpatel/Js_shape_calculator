@@ -7,6 +7,7 @@ function getShape(){
     const shape = document.getElementById("shapes").elements["shape"].value;
     document.querySelector('.spanshape').innerHTML = shape;
     document.querySelector('.resultshape').innerHTML = shape;
+    document.querySelector('.movescreen').style.bottom = "100%";
     console.log(shape);
     switch (shape) {
         case "circle":
@@ -34,6 +35,7 @@ function getShape(){
 
 function getDimensions(){
     const shape = document.getElementById("shapes").elements["shape"].value;
+    document.querySelector('.movescreen').style.bottom = "200%";
     a = document.getElementById("dimensions").elements["w"].value;
     b = document.getElementById("dimensions").elements["h"].value;
     console.log(`a: ${a} b:${b}`)
@@ -65,5 +67,5 @@ function displayArea(area){
 
 // on pressing cancel, go to homepage
 function goHome(){
-
+    document.querySelector('.movescreen').style.bottom = "0%";
 }
