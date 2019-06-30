@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Shape Calculator</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css"> 
+	<meta name="viewport" content="width=device-width , initial-scale=1.0">
+	<!-- <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script> -->
+</head>
+<body>
+    <div class="fullcontainer">
+        <div class="calculator">
+            <div class="screen" id="screen1">
+				<h1>Select your shape</h1>
+				<form name="shapesform" id="shapes" onsubmit = "getShape()">
+					<input type="radio" name="shape" value="circle" class="shape circle">Circle
+					<input type="radio" name="shape" value="square" class="shape square">Square
+					<input type="radio" name="shape" value="rectangle" class="shape rectangle">Rectangle
+					<input type="radio" name="shape" value="ellipse" class="shape ellipse">Ellipse
+					<button type="submit">Next</button>
+				</form>
+			</div><!-- end screen1 -->
+			<div class="screen" id="screen2">
+				<h1>screen 2</h1>
+				<p>You have selected a <span>shape</span></p>
+				<p>Input required variables</p>
+				<form>
+					
+				</form>
+			</div><!-- end screen2 -->
+			<div class="screen" id="screen3">
+				<h1>screen 3</h1>
+			</div><!-- end screen3 -->
+        </div>
+	</div>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
