@@ -1,3 +1,9 @@
+// P element of checked radio button
+document.getElementById("shapes").addEventListener('change', function() {
+    document.querySelector('.selradio').classList.remove('selradio');
+    document.querySelector('input[type="radio"]:checked').parentNode.classList.add('selradio');
+});
+
 const d1 = document.querySelector('.d1');
 const d2 = document.querySelector('.d2');
 const num2 = document.querySelector('.num2');
@@ -67,5 +73,5 @@ function displayArea(area){
 
 // on pressing cancel, go to homepage
 function goHome(){
-    document.querySelector('.movescreen').style.bottom = "0%";
+    location.reload();
 }

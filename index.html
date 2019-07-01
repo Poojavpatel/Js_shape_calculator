@@ -5,12 +5,12 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css"> 
 	<meta name="viewport" content="width=device-width , initial-scale=1.0">
-	<!-- <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script> -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 <body>
     <div class="fullcontainer">
 		<div class="header">
-			<img src="BWLogo.png" alt="Bombay Works logo">
+			<img src="img/BWLogo.png" alt="Bombay Works logo">
 		</div>
 		<div class="intro">
 			<h2>Welcome To Shape Calculator</h2>
@@ -21,48 +21,59 @@
             <div class="screen" id="screen1">
 				<h1>1. Select your shape</h1>
 				<form action="javascript:getShape()" name="shapesform" id="shapes">
-					<p class="form__answer">
+					<p class="form__answer selradio">
 						<input type="radio" name="shape" value="circle" class="shape" id="circle" checked>
-						<label for="circle"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-						</svg>Circle</label>
+						<label for="circle">
+							<i class="far fa-circle"></i>
+							<span class="shapelabel">Circle</span>
+						</label>
 					</p>
 					<p class="form__answer">
 						<input type="radio" name="shape" value="square" class="shape" id="square">
-						<label for="square"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-						</svg>Square</label>
+						<label for="square">
+							<i class="far fa-square"></i>
+							<span class="shapelabel">Square</span>
+						</label>
 					</p>
 					<p class="form__answer">
 						<input type="radio" name="shape" value="rectangle" class="shape" id="rectangle">
-						<label for="rectangle"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-						</svg>Rectangle</label>
+						<label for="rectangle">
+							<i class="far fa-square"></i>
+							<span class="shapelabel">Rectangle</span>
+						</label>
 					</p>
 					<p class="form__answer">
 						<input type="radio" name="shape" value="ellipse" class="shape" id="ellipse">
-						<label for="ellipse"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-						</svg>Ellipse</label>
+						<label for="ellipse">
+							<i class="far fa-circle"></i>
+							<span class="shapelabel">Ellipse</span>
+						</label>
 					</p>
 					<button type="submit">Next</button>
 				</form>
 			</div><!-- end screen1 -->
 			<div class="screen" id="screen2">
-				<h1>screen 2</h1>
-				<p>You have selected a <span class="spanshape">shape</span></p>
-				<p>Input required variables</p>
-				<form name="dimensionform" id="dimensions" onsubmit = "getDimensions();return false">
-					<label for="w" class="d1">Dimension 1</label>
-					<input type="number" name="w" value="0" step="any"> 
-					<label for="h" class="d2">Dimension 2</label>
-					<input type="number" name="h" value="0" class="num2" step="any">
-					<button type="submit">Next</button>
-					<button class="cancel" onclick="goHome()">Cancel</button>
-				</form>
+				<h1>2. Insert Values</h1>
+				<div class="box">
+					<p>You have selected a <span class="spanshape">shape</span><br>Input required variables</p>
+					<form name="dimensionform" id="dimensions" onsubmit = "getDimensions();return false">
+						<label for="w" class="d1">Dimension 1</label>
+						<input type="number" name="w" value="0" step="any"> 
+						<label for="h" class="d2">Dimension 2</label>
+						<input type="number" name="h" value="0" class="num2" step="any">
+						<button type="submit">Next</button>
+						<button class="cancel" id="scr2cancel" onclick="goHome()">Cancel</button>
+					</form>
+				</div>
 			</div><!-- end screen2 -->
 			<div class="screen" id="screen3">
-				<h1>screen 3</h1>
-				<p>You have calculated the area of <span class="resultshape"></span></p>
-				<p>Below is your result</p>
-				<h2>The area is <span class='areaspan'>0.00</span></h2>
-				<button class="cancel" onclick="goHome()">Start Over</button>
+				<h1>3. Your Results</h1>
+				<div class="box">
+					<p>You have calculated the area of <span class="resultshape"></span>
+						<br>Below is your result</p>
+					<h2>The area is <span class='areaspan'>0.00</span></h2>
+					<button class="cancel" onclick="goHome()">Start Over</button>
+				</div>
 			</div><!-- end screen3 -->
 			</div>
         </div>
